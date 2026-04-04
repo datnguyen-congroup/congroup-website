@@ -22,20 +22,50 @@
 
     <!-- Logo ConGroup -->
     <div class="logo-wrap">
-      <img src="assets/logo-en.svg" alt="ConGroup – Happiness from Creating Value" />
+      <img class="logo-vi" src="assets/logo-vi.svg"  alt="ConGroup – Hạnh Phúc Từ Tạo Ra Giá Trị" />
+      <img class="logo-en" src="assets/logo-en.svg"  alt="ConGroup – Happiness from Creating Value" />
     </div>
 
-    <!-- Trích dẫn -->
-    <div class="quote-block">
-      <p>Lão Tử dạy <i>"Hành Trình Vạn Dặm Bắt Đầu Từ Một Bước Chân"</i>. ConGroup cùng tin điều đó<br class="desktop-only" />
-      và đang bước những bước đầu tiên của chính mình. Cảm ơn bạn đã ghé thăm và mong được kết nối.</p>
+    <!-- Tiếng Việt -->
+    <div class="quote-block lang-vi">
+      <p class="mobile-only">Lão Tử dạy</p>
+      <p class="mobile-only"><i>"Hành Trình Vạn Dặm</i></p>
+      <p class="mobile-only"><i>Bắt Đầu Từ Một Bước Chân".</i></p>
+      <p class="mobile-only">ConGroup cũng tin điều đó và đang bước</p>
+      <p class="mobile-only">những bước đầu tiêu của chính mình.</p>
+      <p class="mobile-only">Cảm ơn bạn đã ghé thăm</p>
+      <p class="mobile-only">và mong được kết nối.</p>
+      <p class="desktop-only">Lão Tử dạy <i>"Hành Trình Vạn Dặm Bắt Đầu Từ Một Bước Chân"</i>. ConGroup cũng tin điều đó<br />
+      và đang bước những bước đầu tiêu của chính mình. Cảm ơn bạn đã ghé thăm và mong được kết nối.</p>
     </div>
 
-    <!-- Thông tin liên hệ -->
-    <div class="contact-block">
+    <!-- English -->
+    <div class="quote-block lang-en">
+      <p class="mobile-only">Lao Tzu said</p>
+      <p class="mobile-only"><i>"A Journey of a Thousand Miles</i></p>
+      <p class="mobile-only"><i>Begins with a Single Step".</i></p>
+      <p class="mobile-only">ConGroup believes in this and is taking</p>
+      <p class="mobile-only">its very first steps of its own.</p>
+      <p class="mobile-only">Thank you for visiting</p>
+      <p class="mobile-only">and we hope to connect with you.</p>
+      <p class="desktop-only">Lao Tzu said <i>"A Journey of a Thousand Miles Begins with a Single Step"</i>. ConGroup believes in this<br />
+      and is taking its very first steps of its own. Thank you for visiting and we hope to connect with you.</p>
+    </div>
+
+    <!-- Thông tin liên hệ – Tiếng Việt -->
+    <div class="contact-block lang-vi">
       <p class="contact-name">Hoàng Tuấn - Founder của ConGroup</p>
       <p class="contact-info">
         Điện thoại/ Zalo: +84 36 588 1368<br />
+        Email: Tuan.HoangAnh@ConGroup.vn
+      </p>
+    </div>
+
+    <!-- Contact – English -->
+    <div class="contact-block lang-en">
+      <p class="contact-name">Hoàng Tuấn - Founder of ConGroup</p>
+      <p class="contact-info">
+        Phone/ Zalo: +84 36 588 1368<br />
         Email: Tuan.HoangAnh@ConGroup.vn
       </p>
     </div>
@@ -52,5 +82,18 @@
 
   </div>
 </div>
+
+<script>
+  const lang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'vi';
+
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('.lang-vi, .lang-en').forEach(el => {
+    el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
+  });
+
+  document.querySelector('.logo-vi').style.display = lang === 'vi' ? 'block' : 'none';
+  document.querySelector('.logo-en').style.display = lang === 'en' ? 'block' : 'none';
+</script>
 </body>
 </html>

@@ -34,8 +34,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   /* Square using the taller dimension so it fills the viewport */
-  width: max(100vw, 100vh);
-  height: max(100vw, 100vh);
+  width: max(80vw, 80vh);
+  height: max(80vw, 80vh);
   pointer-events: none;
   user-select: none;
 }
@@ -81,9 +81,12 @@ body {
   display: block;
 }
 
-/* Hiển thị br trên desktop/mobile */
+/* Responsive text helpers */
 .desktop-only {
   display: none;
+}
+.mobile-only {
+  display: block;
 }
 
 /* Quote */
@@ -145,7 +148,10 @@ body {
   }
 
   .desktop-only {
-    display: inline;
+    display: block;
+  }
+  .mobile-only {
+    display: none;
   }
 
   /* Quote desktop */
