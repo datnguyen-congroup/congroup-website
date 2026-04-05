@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ConGroup - Happiness from Creating Value</title>
+  <title>ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị</title>
+  <meta name="description" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị. Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ: +84 36 588 1368 | Tuan.HoangAnh@ConGroup.vn" />
+  <meta name="keywords" content="ConGroup, ConHeritage, ConFood, ConDigital, ConTrust, ConWash, ConComfort, Hoàng Tuấn, kiến tạo giá trị" />
+  <meta name="author" content="ConGroup" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://congroup.vn/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://congroup.vn/" />
+  <meta property="og:title" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị" />
+  <meta property="og:description" content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368" />
+  <meta property="og:image" content="https://congroup.vn/assets/og-image.png" id="og-image" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:site_name" content="ConGroup" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị" />
+  <meta name="twitter:description" content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368" />
+  <meta name="twitter:image" content="https://congroup.vn/assets/og-image.png" id="twitter-image" />
+
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,32 +63,32 @@
 
     <!-- English -->
     <div class="quote-block lang-en">
-      <p class="mobile-only">Lao Tzu said</p>
-      <p class="mobile-only"><i>"A Journey of a Thousand Miles</i></p>
-      <p class="mobile-only"><i>Begins with a Single Step".</i></p>
-      <p class="mobile-only">ConGroup believes in this and is taking</p>
-      <p class="mobile-only">its very first steps of its own.</p>
-      <p class="mobile-only">Thank you for visiting</p>
-      <p class="mobile-only">and we hope to connect with you.</p>
-      <p class="desktop-only">Lao Tzu said <i>"A Journey of a Thousand Miles Begins with a Single Step"</i>. ConGroup believes in this<br />
-      and is taking its very first steps of its own. Thank you for visiting and we hope to connect with you.</p>
+      <p class="mobile-only">Lao Tzu once taught:</p>
+      <p class="mobile-only"><i>"A journey of a thousand miles</i></p>
+      <p class="mobile-only"><i>begins with a single step."</i></p>
+      <p class="mobile-only">At ConGroup, we embrace this philosophy</p>
+      <p class="mobile-only">as we take our very first steps.</p>
+      <p class="mobile-only">Thank you for visiting us,</p>
+      <p class="mobile-only">and we look forward to connecting with you.</p>
+      <p class="desktop-only">Lao Tzu once taught: <i>"A journey of a thousand miles begins with a single step."</i> At ConGroup, we embrace this philosophy<br />
+      as we take our very first steps. Thank you for visiting us, and we look forward to connecting with you.</p>
     </div>
 
     <!-- Thông tin liên hệ – Tiếng Việt -->
     <div class="contact-block lang-vi">
       <p class="contact-name">Hoàng Tuấn - Founder của ConGroup</p>
       <p class="contact-info">
-        Điện thoại/ Zalo: +84 36 588 1368<br />
-        Email: Tuan.HoangAnh@ConGroup.vn
+        Điện thoại/ Zalo: <a href="tel:+84365881368">+84 36 588 1368</a><br />
+        Email: <a href="mailto:Tuan.HoangAnh@ConGroup.vn">Tuan.HoangAnh@ConGroup.vn</a>
       </p>
     </div>
 
     <!-- Contact – English -->
     <div class="contact-block lang-en">
-      <p class="contact-name">Hoàng Tuấn - Founder of ConGroup</p>
+      <p class="contact-name">Hoang Tuan – Founder of ConGroup</p>
       <p class="contact-info">
-        Phone/ Zalo: +84 36 588 1368<br />
-        Email: Tuan.HoangAnh@ConGroup.vn
+        Phone/ Zalo: <a href="tel:+84365881368">+84 36 588 1368</a><br />
+        Email: <a href="mailto:Tuan.HoangAnh@ConGroup.vn">Tuan.HoangAnh@ConGroup.vn</a>
       </p>
     </div>
 
@@ -95,6 +116,10 @@
 
   document.querySelector('.logo-vi').style.display = lang === 'vi' ? 'block' : 'none';
   document.querySelector('.logo-en').style.display = lang === 'en' ? 'block' : 'none';
+
+  const ogImg = lang === 'en' ? 'https://congroup.vn/assets/og-image-en.png' : 'https://congroup.vn/assets/og-image.png';
+  document.getElementById('og-image').content = ogImg;
+  document.getElementById('twitter-image').content = ogImg;
 </script>
 </body>
 </html>
