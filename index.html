@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ConGroup - Happiness from Creating Value</title>
+  <title>ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị</title>
+  <meta name="description" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị. Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ: +84 36 588 1368 | Tuan.HoangAnh@ConGroup.vn" />
+  <meta name="keywords" content="ConGroup, ConHeritage, ConFood, ConDigital, ConTrust, ConWash, ConComfort, Hoàng Tuấn, kiến tạo giá trị" />
+  <meta name="author" content="ConGroup" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://congroup.vn/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://congroup.vn/" />
+  <meta property="og:title" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị" />
+  <meta property="og:description" content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368" />
+  <meta property="og:image" content="https://congroup.vn/assets/og-image.png" id="og-image" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:site_name" content="ConGroup" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị" />
+  <meta name="twitter:description" content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368" />
+  <meta name="twitter:image" content="https://congroup.vn/assets/og-image.png" id="twitter-image" />
+
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,6 +116,10 @@
 
   document.querySelector('.logo-vi').style.display = lang === 'vi' ? 'block' : 'none';
   document.querySelector('.logo-en').style.display = lang === 'en' ? 'block' : 'none';
+
+  const ogImg = lang === 'en' ? 'https://congroup.vn/assets/og-image-en.png' : 'https://congroup.vn/assets/og-image.png';
+  document.getElementById('og-image').content = ogImg;
+  document.getElementById('twitter-image').content = ogImg;
 </script>
 </body>
 </html>
