@@ -27,6 +27,49 @@ body {
   background: #823719;
 }
 
+/* ─── LANGUAGE SWITCHER ─── */
+.lang-switcher {
+  position: fixed;
+  top: 20px;
+  right: 28px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px;
+  padding: 6px 12px;
+  backdrop-filter: blur(4px);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.lang-btn:hover {
+  color: #fff;
+}
+
+.lang-btn.active {
+  color: #fff;
+}
+
+.lang-divider {
+  color: rgba(255,255,255,0.3);
+  font-size: 11px;
+  user-select: none;
+}
+
 /* ─── WATERMARK ─── */
 .bg-watermark-wrap {
   position: absolute;
@@ -46,7 +89,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  animation: spin-ccw 30s linear infinite;
+  animation: spin-ccw 120s linear infinite;
 }
 
 /* Icon ConGroup nằm chính giữa Trống đồng — 48.36% = 789.52/1632.66 */
@@ -58,7 +101,7 @@ body {
   width: 48%;
   height: 48%;
   object-fit: contain;
-  animation: spin-cw 30s linear infinite;
+  animation: spin-cw 120s linear infinite;
 }
 
 @keyframes spin-ccw {

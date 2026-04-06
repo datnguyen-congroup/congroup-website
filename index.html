@@ -34,6 +34,13 @@
 <body>
 <div class="page">
 
+  <!-- Language switcher -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="vi">Tiếng Việt</button>
+    <span class="lang-divider">|</span>
+    <button class="lang-btn" data-lang="en">English</button>
+  </div>
+
   <!-- Watermark: Trống đồng + Icon chồng giữa -->
   <div class="bg-watermark-wrap" aria-hidden="true">
     <img class="troung-dong" src="assets/trong-dong.svg" alt="" />
@@ -106,20 +113,38 @@
 </div>
 
 <script>
-  const lang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'vi';
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
 
-  document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-vi, .lang-en').forEach(el => {
+      el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
+    });
 
-  document.querySelectorAll('.lang-vi, .lang-en').forEach(el => {
-    el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
+    document.querySelector('.logo-vi').style.display = lang === 'vi' ? 'block' : 'none';
+    document.querySelector('.logo-en').style.display = lang === 'en' ? 'block' : 'none';
+
+    const ogImg = lang === 'en' ? 'https://congroup.vn/assets/og-image-en.png' : 'https://congroup.vn/assets/og-image.png';
+    document.getElementById('og-image').content = ogImg;
+    document.getElementById('twitter-image').content = ogImg;
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  const initLang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'vi';
+  applyLang(initLang);
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newLang = btn.dataset.lang;
+      const url = new URL(location.href);
+      if (newLang === 'vi') url.searchParams.delete('lang');
+      else url.searchParams.set('lang', newLang);
+      history.pushState({}, '', url);
+      applyLang(newLang);
+    });
   });
-
-  document.querySelector('.logo-vi').style.display = lang === 'vi' ? 'block' : 'none';
-  document.querySelector('.logo-en').style.display = lang === 'en' ? 'block' : 'none';
-
-  const ogImg = lang === 'en' ? 'https://congroup.vn/assets/og-image-en.png' : 'https://congroup.vn/assets/og-image.png';
-  document.getElementById('og-image').content = ogImg;
-  document.getElementById('twitter-image').content = ogImg;
 </script>
 </body>
 </html>
