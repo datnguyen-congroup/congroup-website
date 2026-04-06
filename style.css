@@ -89,7 +89,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  animation: spin-ccw 30s linear infinite;
+  animation: spin-ccw 120s linear infinite;
 }
 
 /* Icon ConGroup nằm chính giữa Trống đồng — 48.36% = 789.52/1632.66 */
@@ -101,7 +101,7 @@ body {
   width: 48%;
   height: 48%;
   object-fit: contain;
-  animation: spin-cw 30s linear infinite;
+  animation: spin-cw 120s linear infinite;
 }
 
 @keyframes spin-ccw {
