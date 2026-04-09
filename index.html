@@ -1,150 +1,479 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị</title>
-  <meta name="description" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị. Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ: +84 36 588 1368 | Tuan.HoangAnh@ConGroup.vn" />
-  <meta name="keywords" content="ConGroup, ConHeritage, ConFood, ConDigital, ConTrust, ConWash, ConComfort, Hoàng Tuấn, kiến tạo giá trị" />
-  <meta name="author" content="ConGroup" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://congroup.vn/" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị</title>
+    <meta
+      name="description"
+      content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị. Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ: +84 36 588 1368 | Tuan.HoangAnh@ConGroup.vn"
+    />
+    <meta
+      name="keywords"
+      content="ConGroup, ConHeritage, ConFood, ConDigital, ConTrust, ConWash, ConComfort, Hoàng Tuấn, kiến tạo giá trị"
+    />
+    <meta name="author" content="ConGroup" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://congroup.vn/" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://congroup.vn/" />
-  <meta property="og:title" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị" />
-  <meta property="og:description" content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368" />
-  <meta property="og:image" content="https://congroup.vn/assets/og-image.png" id="og-image" />
-  <meta property="og:locale" content="vi_VN" />
-  <meta property="og:site_name" content="ConGroup" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://congroup.vn/" />
+    <meta
+      property="og:title"
+      content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị"
+    />
+    <meta
+      property="og:description"
+      content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368"
+    />
+    <meta
+      property="og:image"
+      content="https://congroup.vn/assets/og-image.png"
+      id="og-image"
+    />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:site_name" content="ConGroup" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị" />
-  <meta name="twitter:description" content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368" />
-  <meta name="twitter:image" content="https://congroup.vn/assets/og-image.png" id="twitter-image" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ConGroup – Hạnh Phúc Từ Kiến Tạo Giá Trị"
+    />
+    <meta
+      name="twitter:description"
+      content="ConGroup – Hành trình vạn dặm bắt đầu từ một bước chân. Liên hệ Founder: +84 36 588 1368"
+    />
+    <meta
+      name="twitter:image"
+      content="https://congroup.vn/assets/og-image.png"
+      id="twitter-image"
+    />
 
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<div class="page">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/icon.svg" />
+    <link rel="preload" as="image" href="assets/trong-dong.svg" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <!-- Language switcher -->
-  <div class="lang-switcher">
-    <button class="lang-btn active" data-lang="vi">Tiếng Việt</button>
-    <span class="lang-divider">|</span>
-    <button class="lang-btn" data-lang="en">English</button>
-  </div>
+      html,
+      body {
+        height: 100%;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        background: #823719;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
-  <!-- Watermark: Trống đồng + Icon chồng giữa -->
-  <div class="bg-watermark-wrap" aria-hidden="true">
-    <img class="troung-dong" src="assets/trong-dong.svg" alt="" />
-    <img class="bg-icon"     src="assets/icon.svg"       alt="" />
-  </div>
+      /* ─── PAGE ─── */
+      .page {
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #823719;
+      }
 
-  <div class="content">
+      /* ─── LANGUAGE SWITCHER ─── */
+      .lang-switcher {
+        position: fixed;
+        top: 20px;
+        right: 28px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 6px;
+        padding: 6px 12px;
+        backdrop-filter: blur(4px);
+      }
 
-    <!-- Logo ConGroup -->
-    <div class="logo-wrap">
-      <img class="logo-vi" src="assets/logo-vi.svg"  alt="ConGroup – Hạnh Phúc Từ Tạo Ra Giá Trị" />
-      <img class="logo-en" src="assets/logo-en.svg"  alt="ConGroup – Happiness from Creating Value" />
+      .lang-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.55);
+        padding: 0;
+        transition: color 0.2s;
+      }
+
+      .lang-btn:hover {
+        color: #fff;
+      }
+
+      .lang-btn.active {
+        color: #fff;
+      }
+
+      .lang-divider {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 11px;
+        user-select: none;
+      }
+
+      /* ─── WATERMARK ─── */
+      .bg-watermark-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Square using the taller dimension so it fills the viewport */
+        width: max(80vw, 80vh);
+        height: max(80vw, 80vh);
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .bg-watermark-wrap .troung-dong {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        animation: spin-ccw 120s linear infinite;
+      }
+
+      /* Icon ConGroup nằm chính giữa Trống đồng — 48.36% = 789.52/1632.66 */
+      .bg-watermark-wrap .bg-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48%;
+        height: 48%;
+        object-fit: contain;
+        animation: spin-cw 120s linear infinite;
+      }
+
+      @keyframes spin-ccw {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+
+      @keyframes spin-cw {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      /* ─── CONTENT ─── */
+      .content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 56px 36px 48px;
+        max-width: 520px;
+      }
+
+      .logo-wrap {
+        margin-bottom: 36px;
+      }
+      .logo-wrap img {
+        width: 160px;
+        height: auto;
+        display: block;
+      }
+
+      /* Responsive text helpers */
+      .desktop-only {
+        display: none;
+      }
+      .mobile-only {
+        display: block;
+      }
+
+      /* Quote */
+      .quote-block {
+        color: #fff;
+        margin-bottom: 32px;
+        line-height: 1.6;
+        font-size: 13px;
+      }
+
+      /* Contact */
+      .contact-block {
+        color: #fff;
+        margin-bottom: 40px;
+      }
+      .contact-name {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .contact-info {
+        font-size: 13px;
+        line-height: 1.8;
+        font-weight: 400;
+      }
+      .contact-info a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .contact-info a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      /* Sub-brand logos */
+      .logo-cluster img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .logo-cluster-mobile {
+        display: block;
+      }
+      .logo-cluster-desktop {
+        display: none;
+      }
+
+      /* ─── DESKTOP (≥ 960px) ─── */
+      @media (min-width: 960px) {
+        /* Trống đồng: dùng chiều cao viewport làm kích thước */
+        .bg-watermark-wrap {
+          width: 150vh;
+          height: 150vh;
+        }
+
+        .content {
+          max-width: 980px;
+          padding: 20px 40px 100px;
+          gap: 0;
+        }
+
+        .logo-wrap {
+          margin-bottom: 80px;
+        }
+        .logo-wrap img {
+          width: 210px;
+        }
+
+        .desktop-only {
+          display: block;
+        }
+        .mobile-only {
+          display: none;
+        }
+
+        /* Quote desktop */
+        .quote-block {
+          margin-bottom: 40px;
+          font-size: 14px;
+          line-height: 1.8;
+        }
+
+        .contact-block {
+          margin-bottom: 80px;
+        }
+        .contact-name {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        .contact-info {
+          font-size: 14px;
+        }
+
+        .logo-cluster-mobile {
+          display: none;
+        }
+        .logo-cluster-desktop {
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Language switcher -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="vi">Tiếng Việt</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
+
+      <!-- Watermark: Trống đồng + Icon chồng giữa -->
+      <div class="bg-watermark-wrap" aria-hidden="true">
+        <img class="troung-dong" src="assets/trong-dong.svg" alt="Trống đồng" />
+        <img class="bg-icon" src="assets/icon.svg" alt="Logo ConGroup" />
+      </div>
+
+      <div class="content">
+        <!-- Logo ConGroup -->
+        <div class="logo-wrap">
+          <img
+            class="logo-vi"
+            src="assets/logo-vi.svg"
+            alt="ConGroup – Hạnh Phúc Từ Tạo Ra Giá Trị"
+            width="264.44"
+            height="165.47"
+          />
+          <img
+            class="logo-en"
+            src="assets/logo-en.svg"
+            alt="ConGroup – Happiness from Creating Value"
+            width="277.56"
+            height="165.34"
+          />
+        </div>
+
+        <!-- Tiếng Việt -->
+        <div class="quote-block lang-vi">
+          <p class="mobile-only">Lão Tử dạy</p>
+          <p class="mobile-only"><i>"Hành Trình Vạn Dặm</i></p>
+          <p class="mobile-only"><i>Bắt Đầu Từ Một Bước Chân".</i></p>
+          <p class="mobile-only">ConGroup cũng tin điều đó và đang bước</p>
+          <p class="mobile-only">những bước đầu tiêu của chính mình.</p>
+          <p class="mobile-only">Cảm ơn bạn đã ghé thăm</p>
+          <p class="mobile-only">và mong được kết nối.</p>
+          <p class="desktop-only">
+            Lão Tử dạy <i>"Hành Trình Vạn Dặm Bắt Đầu Từ Một Bước Chân"</i>.
+            ConGroup cũng tin điều đó<br />
+            và đang bước những bước đầu tiêu của chính mình. Cảm ơn bạn đã ghé
+            thăm và mong được kết nối.
+          </p>
+        </div>
+
+        <!-- English -->
+        <div class="quote-block lang-en">
+          <p class="mobile-only">Lao Tzu once taught:</p>
+          <p class="mobile-only"><i>"A journey of a thousand miles</i></p>
+          <p class="mobile-only"><i>begins with a single step."</i></p>
+          <p class="mobile-only">At ConGroup, we embrace this philosophy</p>
+          <p class="mobile-only">as we take our very first steps.</p>
+          <p class="mobile-only">Thank you for visiting us,</p>
+          <p class="mobile-only">and we look forward to connecting with you.</p>
+          <p class="desktop-only">
+            Lao Tzu once taught:
+            <i>"A journey of a thousand miles begins with a single step."</i> At
+            ConGroup, we embrace this philosophy<br />
+            as we take our very first steps. Thank you for visiting us, and we
+            look forward to connecting with you.
+          </p>
+        </div>
+
+        <!-- Thông tin liên hệ – Tiếng Việt -->
+        <div class="contact-block lang-vi">
+          <p class="contact-name">Hoàng Tuấn - Founder của ConGroup</p>
+          <p class="contact-info">
+            Điện thoại/ Zalo: <a href="tel:+84365881368">+84 36 588 1368</a
+            ><br />
+            Email:
+            <a href="mailto:Tuan.HoangAnh@ConGroup.vn"
+              >Tuan.HoangAnh@ConGroup.vn</a
+            >
+          </p>
+        </div>
+
+        <!-- Contact – English -->
+        <div class="contact-block lang-en">
+          <p class="contact-name">Hoang Tuan – Founder of ConGroup</p>
+          <p class="contact-info">
+            Phone/ Zalo: <a href="tel:+84365881368">+84 36 588 1368</a><br />
+            Email:
+            <a href="mailto:Tuan.HoangAnh@ConGroup.vn"
+              >Tuan.HoangAnh@ConGroup.vn</a
+            >
+          </p>
+        </div>
+
+        <!-- Cụm logo sub-brand – Mobile (2×3) -->
+        <div class="logo-cluster logo-cluster-mobile">
+          <img
+            src="assets/logo-cluster-mobile.svg"
+            alt="ConHeritage, ConFood, ConDigital, ConTrüst, ConWash, ConComfort"
+            width="613.73"
+            height="363.43"
+          />
+        </div>
+
+        <!-- Cụm logo sub-brand – Desktop -->
+        <div class="logo-cluster logo-cluster-desktop">
+          <img
+            src="assets/logo-cluster-desktop.svg"
+            alt="ConHeritage, ConFood, ConDigital, ConTrüst, ConWash, ConComfort"
+            width="1179.26"
+            height="197.66"
+          />
+        </div>
+      </div>
     </div>
 
-    <!-- Tiếng Việt -->
-    <div class="quote-block lang-vi">
-      <p class="mobile-only">Lão Tử dạy</p>
-      <p class="mobile-only"><i>"Hành Trình Vạn Dặm</i></p>
-      <p class="mobile-only"><i>Bắt Đầu Từ Một Bước Chân".</i></p>
-      <p class="mobile-only">ConGroup cũng tin điều đó và đang bước</p>
-      <p class="mobile-only">những bước đầu tiêu của chính mình.</p>
-      <p class="mobile-only">Cảm ơn bạn đã ghé thăm</p>
-      <p class="mobile-only">và mong được kết nối.</p>
-      <p class="desktop-only">Lão Tử dạy <i>"Hành Trình Vạn Dặm Bắt Đầu Từ Một Bước Chân"</i>. ConGroup cũng tin điều đó<br />
-      và đang bước những bước đầu tiêu của chính mình. Cảm ơn bạn đã ghé thăm và mong được kết nối.</p>
-    </div>
+    <script>
+      function applyLang(lang) {
+        document.documentElement.lang = lang;
 
-    <!-- English -->
-    <div class="quote-block lang-en">
-      <p class="mobile-only">Lao Tzu once taught:</p>
-      <p class="mobile-only"><i>"A journey of a thousand miles</i></p>
-      <p class="mobile-only"><i>begins with a single step."</i></p>
-      <p class="mobile-only">At ConGroup, we embrace this philosophy</p>
-      <p class="mobile-only">as we take our very first steps.</p>
-      <p class="mobile-only">Thank you for visiting us,</p>
-      <p class="mobile-only">and we look forward to connecting with you.</p>
-      <p class="desktop-only">Lao Tzu once taught: <i>"A journey of a thousand miles begins with a single step."</i> At ConGroup, we embrace this philosophy<br />
-      as we take our very first steps. Thank you for visiting us, and we look forward to connecting with you.</p>
-    </div>
+        document.querySelectorAll(".lang-vi, .lang-en").forEach((el) => {
+          el.style.display = el.classList.contains("lang-" + lang)
+            ? ""
+            : "none";
+        });
 
-    <!-- Thông tin liên hệ – Tiếng Việt -->
-    <div class="contact-block lang-vi">
-      <p class="contact-name">Hoàng Tuấn - Founder của ConGroup</p>
-      <p class="contact-info">
-        Điện thoại/ Zalo: <a href="tel:+84365881368">+84 36 588 1368</a><br />
-        Email: <a href="mailto:Tuan.HoangAnh@ConGroup.vn">Tuan.HoangAnh@ConGroup.vn</a>
-      </p>
-    </div>
+        document.querySelector(".logo-vi").style.display =
+          lang === "vi" ? "block" : "none";
+        document.querySelector(".logo-en").style.display =
+          lang === "en" ? "block" : "none";
 
-    <!-- Contact – English -->
-    <div class="contact-block lang-en">
-      <p class="contact-name">Hoang Tuan – Founder of ConGroup</p>
-      <p class="contact-info">
-        Phone/ Zalo: <a href="tel:+84365881368">+84 36 588 1368</a><br />
-        Email: <a href="mailto:Tuan.HoangAnh@ConGroup.vn">Tuan.HoangAnh@ConGroup.vn</a>
-      </p>
-    </div>
+        const ogImg =
+          lang === "en"
+            ? "https://congroup.vn/assets/og-image-en.png"
+            : "https://congroup.vn/assets/og-image.png";
+        document.getElementById("og-image").content = ogImg;
+        document.getElementById("twitter-image").content = ogImg;
 
-    <!-- Cụm logo sub-brand – Mobile (2×3) -->
-    <div class="logo-cluster logo-cluster-mobile">
-      <img src="assets/logo-cluster-mobile.svg" alt="ConHeritage, ConFood, ConDigital, ConTrüst, ConWash, ConComfort" />
-    </div>
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+      }
 
-    <!-- Cụm logo sub-brand – Desktop -->
-    <div class="logo-cluster logo-cluster-desktop">
-      <img src="assets/logo-cluster-desktop.svg" alt="ConHeritage, ConFood, ConDigital, ConTrüst, ConWash, ConComfort" />
-    </div>
+      const initLang =
+        new URLSearchParams(location.search).get("lang") === "en" ? "en" : "vi";
+      applyLang(initLang);
 
-  </div>
-</div>
-
-<script>
-  function applyLang(lang) {
-    document.documentElement.lang = lang;
-
-    document.querySelectorAll('.lang-vi, .lang-en').forEach(el => {
-      el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
-    });
-
-    document.querySelector('.logo-vi').style.display = lang === 'vi' ? 'block' : 'none';
-    document.querySelector('.logo-en').style.display = lang === 'en' ? 'block' : 'none';
-
-    const ogImg = lang === 'en' ? 'https://congroup.vn/assets/og-image-en.png' : 'https://congroup.vn/assets/og-image.png';
-    document.getElementById('og-image').content = ogImg;
-    document.getElementById('twitter-image').content = ogImg;
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-  }
-
-  const initLang = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'vi';
-  applyLang(initLang);
-
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const newLang = btn.dataset.lang;
-      const url = new URL(location.href);
-      if (newLang === 'vi') url.searchParams.delete('lang');
-      else url.searchParams.set('lang', newLang);
-      history.pushState({}, '', url);
-      applyLang(newLang);
-    });
-  });
-</script>
-</body>
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const newLang = btn.dataset.lang;
+          const url = new URL(location.href);
+          if (newLang === "vi") url.searchParams.delete("lang");
+          else url.searchParams.set("lang", newLang);
+          history.pushState({}, "", url);
+          applyLang(newLang);
+        });
+      });
+    </script>
+  </body>
 </html>
