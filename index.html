@@ -58,8 +58,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="assets/icon.svg" />
-    <link rel="preload" as="image" href="assets/trong-dong.svg" />
+    <link rel="preload" as="image" href="assets/icon.webp"  />
+    <link rel="preload" as="image" href="assets/trong-dong.webp" />
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <style>
       *,
@@ -328,8 +328,13 @@
 
       <!-- Watermark: Trống đồng + Icon chồng giữa -->
       <div class="bg-watermark-wrap" aria-hidden="true">
-        <img class="troung-dong" src="assets/trong-dong.svg" alt="Trống đồng" />
-        <img class="bg-icon" src="assets/icon.svg" alt="Logo ConGroup" />
+        <img
+          class="troung-dong"
+          src="assets/trong-dong.webp"
+          alt="Trống đồng"
+          fetchpriority="high"
+        />
+        <img class="bg-icon" src="assets/icon.webp" alt="Logo ConGroup" />
       </div>
 
       <div class="content">
@@ -414,10 +419,10 @@
         <!-- Cụm logo sub-brand – Mobile (2×3) -->
         <div class="logo-cluster logo-cluster-mobile">
           <img
-            src="assets/logo-cluster-mobile.svg"
+            src="assets/logo-cluster-mobile.webp"
             alt="ConHeritage, ConFood, ConDigital, ConTrüst, ConWash, ConComfort"
-            width="613.73"
-            height="363.43"
+            width="303"
+            height="112.13"
           />
         </div>
 
